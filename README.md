@@ -1,68 +1,149 @@
-# RAG / Revolver
+# RAG Revolver
 
-Local-first RAG workbench with a Three.js revolver picker, FastAPI streaming traces, SQLite event logs, and honest empty states. The frontend is runnable without a configured model or document set; it will show exactly what is missing instead of inventing metrics.
+An intelligent Retrieval-Augmented Generation system built to improve answer quality, reuse successful workflows, detect security threats, compare conflicting information, recall historical knowledge, and monitor web-page changes.
 
-## Run
+## Features:
 
-Terminal 1 (Python 3.11+):
+- Answer improvement using approved training pairs
+- Retrieval evaluation using Hit@4 and MRR
+- Reusable workflow and skill creation
+- Prompt-attack and adversarial testing
+- Poisoned-source detection
+- Hidden-instruction exposure testing
+- Document conflict detection and comparison
+- Page-level citation preservation
+- Time-based knowledge recall
+- Dated notes and historical information storage
+- Web-page monitoring and change detection
+- Automatic update summaries
+- Optional notifications for detected changes
 
-```bash
-cd backend
-python -m venv .venv
-.venv\\Scripts\\activate  # Windows
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+## How It Works:
+
+The user provides documents, notes, approved training pairs, or web pages through the application. The system processes and indexes the available information so that relevant content can be retrieved for each request.
+
+When a question is asked, RAG Revolver retrieves the most relevant sources and generates a grounded response. The system can evaluate the answer, detect conflicting claims, preserve page citations, and identify potentially harmful or manipulated content.
+
+Depending on the task, the system can improve retrieval using Mender, save successful workflows with Skill Forge, test for attacks using Adversary, compare sources using Conflict Hunter, recall historical information with Recall, or monitor web pages through Sentinel.
+
+## RAG Revolver Workflow:
+
+1. Add documents, notes, training pairs, or web pages.
+2. Process and index the available information.
+3. Ask a question or start a workflow.
+4. Retrieve the most relevant sources.
+5. Evaluate the answer and source quality.
+6. Detect conflicts, attacks, or poisoned content.
+7. Generate a grounded response.
+8. Preserve citations and supporting evidence.
+9. Save successful workflows as reusable skills.
+10. Monitor selected sources for future changes.
+
+## RAG Revolver Modules:
+
+### Mender
+
+Finds incorrect or low-quality answers and improves retrieval using approved training pairs, Hit@4, and Mean Reciprocal Rank evaluation.
+
+### Skill Forge
+
+Saves successful workflows as reusable skills that can be applied to similar future tasks.
+
+### Adversary
+
+Tests the system with prompt attacks, poisoned sources, malicious instructions, and attempts to reveal hidden instructions.
+
+### Conflict Hunter
+
+Compares documents, detects conflicting claims, and preserves page-level citations for source verification.
+
+### Recall
+
+Stores dated notes and answers questions based on what was known at a specific point in time.
+
+### Sentinel
+
+Monitors web pages, detects changes, summarizes updates, and optionally sends notifications.
+
+## Supported Applications:
+
+- Knowledge-base question answering
+- Document comparison
+- Research and fact verification
+- Retrieval-quality evaluation
+- Prompt-injection testing
+- Historical information tracking
+- Workflow automation
+- Web-page monitoring
+- Change detection and summarization
+- Citation-aware research
+
+## Example Use Case:
+
+A user asks a question based on multiple documents. RAG Revolver retrieves the relevant content, compares the documents, detects conflicting claims, and preserves the page citations.
+
+If the answer is incorrect, Mender improves the retrieval process using an approved training pair. If the workflow is successful, Skill Forge saves it for future use. Adversary can test the sources for malicious instructions, Recall can provide historical information, and Sentinel can monitor related web pages for future updates.
+
+## Project Structure:
+```text
+rag_revolver/
+│
+├── app/
+│   ├── retrieval/
+│   ├── evaluation/
+│   ├── security/
+│   ├── conflict_detection/
+│   ├── recall/
+│   ├── monitoring/
+│   └── skills/
+│
+├── data/
+├── assets/
+│   └── rag-revolver-demo.gif
+│
+├── requirements.txt
+├── .env.example
+└── README.md
 ```
 
-Terminal 2 (Node 20+):
-
-```bash
-cd frontend
-npm install
-npm run dev
+## Environment Variables:
+```ini
+LLM_API_KEY=your_llm_api_key
+EMBEDDING_API_KEY=your_embedding_api_key
 ```
 
-Open http://localhost:5173. Vite proxies `/api` calls to the FastAPI server on port 8000.
+## Demo:
 
-## Hermes provider
-
-Hermes is an explicit backend provider. Set its OpenAI-compatible service URL before using it:
+Add the project demonstration GIF inside the `assets` folder:
 
 ```text
-HERMES_BASE_URL=http://localhost:8001
-HERMES_MODEL=hermes
-HERMES_CHAT_PATH=/v1/chat/completions
-HERMES_HEALTH_PATH=/health
+assets/rag-revolver-demo.gif
 ```
 
-Then send a chat request with `"hermes_mode": true`. Check the connection with `GET /api/hermes/status?probe=true`. The backend never claims Hermes is live unless the URL is configured and the health probe succeeds. For private mode, Hermes is allowed only when the URL is local and `HERMES_PRIVATE_MODE=true`; otherwise private requests are blocked from sending document content to a remote Hermes service.
-
-## Measurement contract
-
-- **Mender:** hold out question/passage pairs, report hit@4 and MRR before/after. New models remain pending approval and versioned under `models/`.
-- **Skill Forge:** compare run 1 and run 2 wall time and model/tool cost after saving a skill.
-- **Adversary:** report attack success rate on a fixed attack set before/after defenses and export the trace.
-- **Conflict Hunter:** store extracted claims with source/page citations and report coverage; disagreement rows are evidence, not a score.
-- **Recall:** every note has a timestamp and deletion path; “as of” queries filter by date and flag stale/contradictory notes.
-- **Sentinel:** store watch snapshots, diffs, summaries and delivery status; Telegram sends are approval-gated.
-
-Training is intentionally approval-gated and versioned. The included local demo proves the complete path with a held-out evaluation set:
-
-```powershell
-..\venv\Scripts\python.exe backend\train_mender.py --version bge-revolver-demo-001 --demo --epochs 1
-```
-
-The command fine-tunes `BAAI/bge-small-en-v1.5`, writes the model to `models/<version>/`, writes `metrics.json`, and records the candidate as `candidate_pending_approval` in SQLite. The demo currently reports real held-out `hit_at_4` and `mrr` values; the four demo pairs are synthetic and should be replaced with approved pairs from your own documents for a meaningful domain result.
-
-To use real data, approve Mender training pairs first, then run the same script without `--demo` (optionally pass a held-out JSON file with `--eval-file`). A candidate is not used for retrieval until the model approval route is completed:
+Then display it in the README using:
 
 ```text
-POST /api/mender/models/<version>/approve
-POST /api/workflow/approvals/<approval_id>/approve
+![RAG Revolver Demo](./assets/rag-revolver-demo.gif)
 ```
 
-Approval marks the model live, re-embeds the persistent Chroma index with that model, and exposes the active path through `/api/health`. Chroma is included in backend dependencies and is initialized when ingestion is used.
+## Future Improvements:
 
-## Next implementation slices
+- Advanced citation validation
+- More retrieval evaluation metrics
+- Improved conflict-resolution workflows
+- Additional prompt-attack test cases
+- Automated skill quality scoring
+- Scheduled web-page monitoring
+- More notification channels
+- Document and note version history
+- Multi-user knowledge bases
+- Multilingual information retrieval
+- Retrieval and answer-quality analytics
 
-The UI and API establish the shared bot interface, live trace protocol, approval boundary, and measurement surface. Add ingestion and evaluation workers behind the same `bot_id` routes; do not populate charts until real eval rows exist.
+## Conclusion:
+
+RAG Revolver helps build more reliable, secure, and intelligent retrieval systems. Its six modules improve answer quality, reuse successful workflows, detect threats, compare sources, preserve historical knowledge, and monitor changing information.
+
+## Description
+
+RAG Revolver is an intelligent RAG system that improves answer quality, detects conflicts and security threats, recalls historical information, saves reusable workflows, and monitors web-page updates.
