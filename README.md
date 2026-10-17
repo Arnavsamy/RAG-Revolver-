@@ -2,6 +2,17 @@
 
 An intelligent Retrieval-Augmented Generation system built to improve answer quality, reuse successful workflows, detect security threats, compare conflicting information, recall historical knowledge, and monitor web-page changes.
 
+
+## Demo:
+
+
+<img width="400" height="250" alt="rag" src="https://github.com/user-attachments/assets/2a260e4f-8687-479e-8def-7a428928c8f3" />
+
+
+
+
+
+
 ## Features:
 
 - Answer improvement using approved training pairs
@@ -112,19 +123,6 @@ LLM_API_KEY=your_llm_api_key
 EMBEDDING_API_KEY=your_embedding_api_key
 ```
 
-## Demo:
-
-Add the project demonstration GIF inside the `assets` folder:
-
-```text
-assets/rag-revolver-demo.gif
-```
-
-Then display it in the README using:
-
-```text
-![RAG Revolver Demo](./assets/rag-revolver-demo.gif)
-```
 
 ## Future Improvements:
 
@@ -144,6 +142,4 @@ Then display it in the README using:
 
 RAG Revolver helps build more reliable, secure, and intelligent retrieval systems. Its six modules improve answer quality, reuse successful workflows, detect threats, compare sources, preserve historical knowledge, and monitor changing information.
 
-## Description
-
-RAG Revolver is an intelligent RAG system that improves answer quality, detects conflicts and security threats, recalls historical information, saves reusable workflows, and monitors web-page updates.
+CC: Arnav Ahilasamy
