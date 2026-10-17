@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 420" fill="none">
+  <g stroke="#294e4b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M125 10V410" stroke="#c9b9a9" stroke-dasharray="4 7"/>
+    <path d="M121 18h8M121 402h8" stroke="#d9783f"/>
+
+    <!-- upper barrel assembly -->
+    <g transform="rotate(-13 125 64)">
+      <path d="M43 47h133l17 12-17 12H43z" fill="#d9783f" fill-opacity=".13"/>
+      <path d="M50 52h126M48 64h137" stroke="#c48a68" stroke-width=".9"/>
+      <path d="M76 47v24M151 47v24" stroke="#b88a70" stroke-width=".8"/>
+      <path d="M91 48l14 22M101 48l14 22M111 48l14 22" stroke="#b88a70" stroke-width=".7"/>
+      <path d="M174 55l17-8 13 8-13 8z" fill="#f4f0e9" stroke="#d9783f"/>
+    </g>
+
+    <!-- separated sight and fastener -->
+    <path d="M76 100h32l7 8-7 8H76z" fill="#f4f0e9" stroke="#294e4b"/>
+    <path d="M83 104h20M83 108h16" stroke="#b88a70" stroke-width=".8"/>
+    <circle cx="172" cy="109" r="7" fill="#f4f0e9" stroke="#d9783f"/>
+    <circle cx="172" cy="109" r="2" fill="#d9783f"/>
+
+    <!-- frame / receiver -->
+    <g transform="translate(125 156)">
+      <path d="M-51-25h63l24 19v45l-22 20h-65l-12-21V-7z" fill="#d9783f" fill-opacity=".13"/>
+      <path d="M-40-16h46l17 13v32l-17 15h-45l-7-14V-4z" stroke="#c48a68" stroke-width="1"/>
+      <path d="M-27-18l27 13M-27-7L8 10M-27 4l35 18M-27 15l27 14M-8-17l28 15M-8-6l28 15M-8 5l25 13" stroke="#b88a70" stroke-width=".7"/>
+      <path d="M28-18v30l-12 13M37-11v27l-14 15" stroke="#294e4b" stroke-width="1"/>
+      <circle cx="-25" cy="-2" r="4" fill="#f4f0e9"/>
+      <circle cx="29" cy="30" r="3" fill="#f4f0e9"/>
+    </g>
+
+    <!-- cylinder detail -->
+    <g transform="translate(125 238)">
+      <circle r="34" fill="#d9783f" fill-opacity=".13"/>
+      <circle r="29" stroke-width="1"/>
+      <circle r="21" stroke="#c48a68" stroke-width="1"/>
+      <circle r="7" fill="#f4f0e9"/>
+      <circle cy="-14" r="3.5" fill="#f4f0e9"/>
+      <circle cx="12" cy="-7" r="3.5" fill="#f4f0e9"/>
+      <circle cx="12" cy="8" r="3.5" fill="#f4f0e9"/>
+      <circle cy="15" r="3.5" fill="#f4f0e9"/>
+      <circle cx="-12" cy="8" r="3.5" fill="#f4f0e9"/>
+      <circle cx="-12" cy="-7" r="3.5" fill="#f4f0e9"/>
+    </g>
+
+    <!-- trigger and grip parts -->
+    <path d="M75 302h42v20l-10 13H75l-10-13z" fill="#f4f0e9"/>
+    <path d="M75 302h42v20l-10 13H75l-10-13z"/>
+    <path d="M84 308v19M91 308v19M98 308v16" stroke="#b88a70" stroke-width=".8"/>
+    <path d="M139 300c26 2 39 14 39 34 0 17-11 28-31 34l-16-12 14-14c8-8 8-16 0-24z" fill="#d9783f" fill-opacity=".13"/>
+    <path d="M139 300c26 2 39 14 39 34 0 17-11 28-31 34l-16-12 14-14c8-8 8-16 0-24z"/>
+    <path d="M150 311c12 7 16 15 13 25M145 319c11 6 14 13 11 21M140 327c8 5 10 10 8 16" stroke="#b88a70" stroke-width=".8"/>
+    <path d="M72 370h76l12 11-12 11H72l-12-11z" fill="#f4f0e9"/>
+    <path d="M72 370h76l12 11-12 11H72l-12-11z"/>
+    <path d="M82 375l12 12M94 375l12 12M106 375l12 12M118 375l12 12" stroke="#b88a70" stroke-width=".7"/>
+
+    <path d="M43 64h-22M43 156H18M91 238H24M75 319H20M160 391h25" stroke="#c9b9a9" stroke-width=".8"/>
+    <path d="M21 64l-7 7M18 156l-7 7M24 238l-7 7M20 319l-7 7M185 391l7-7" stroke="#c9b9a9" stroke-width=".8"/>
+  </g>
+  <g fill="#8f7b6a" font-family="monospace" font-size="7" letter-spacing="1">
+    <text x="24" y="410">PARTS / FIELD STUDY</text>
+    <text x="181" y="410">01/06</text>
+  </g>
+</svg>

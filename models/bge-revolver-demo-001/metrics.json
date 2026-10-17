@@ -1,0 +1,10 @@
+{
+  "count": 4,
+  "k": 4,
+  "hit_at_4": 1.0,
+  "mrr": 1.0,
+  "train_pairs": 4,
+  "epochs": 1,
+  "base_model": "BAAI/bge-small-en-v1.5",
+  "eval_set": "held_out"
+}

@@ -1,0 +1,14 @@
+{
+  "train": [
+    {"question": "How many remote days can Engineering work?", "passage": "Engineering may work remotely up to three days per week with manager approval."},
+    {"question": "What is the password length requirement?", "passage": "Passwords must contain at least 14 characters and multi-factor authentication is required."},
+    {"question": "How quickly must a critical support ticket receive a response?", "passage": "Critical tickets require a first response within 2 hours."},
+    {"question": "What is the hotel reimbursement limit?", "passage": "The standard hotel reimbursement limit is 180 dollars per night."}
+  ],
+  "test": [
+    {"question": "What is the expense submission deadline?", "positive_index": 0, "candidates": ["Expenses must be submitted within 30 days.", "Critical tickets require a first response within 2 hours.", "Passwords must contain at least 14 characters.", "Engineering may work remotely three days per week.", "The company was founded in 2021."]},
+    {"question": "Which authentication control is mandatory?", "positive_index": 1, "candidates": ["Hotels are reimbursed up to 180 dollars per night.", "Multi-factor authentication is required for company systems.", "Normal tickets receive a response within two business days.", "Finance has a manager approval process.", "Remote work is available three days per week."]},
+    {"question": "How long can Support take to answer a normal ticket?", "positive_index": 2, "candidates": ["Critical tickets receive a first response within 2 hours.", "The MFA policy was published in June 2025.", "Normal tickets require a first response within 2 business days.", "The meal limit is 55 dollars per day.", "Engineering uses a remote-work schedule."]},
+    {"question": "What is the newer remote-work rule?", "positive_index": 3, "candidates": ["The original policy allowed three remote days per week.", "Security incidents must be reported within 24 hours.", "The hotel limit was 180 dollars per night.", "The February 2026 addendum allows four remote-work days per week.", "The company has Engineering and Finance departments."]}
+  ]
+}

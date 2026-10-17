@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 320" fill="none">
+  <g stroke="#294e4b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M110 12V307" stroke="#c9b9a9" stroke-dasharray="4 6"/>
+    <path d="M106 18h8M106 302h8" stroke="#d9783f"/>
+
+    <g transform="translate(110 61)">
+      <circle r="39" fill="#d9783f" fill-opacity=".13"/>
+      <circle r="35" stroke-width="1"/>
+      <circle r="29" stroke="#c48a68" stroke-width="1"/>
+      <circle r="7" fill="#f4f0e9"/>
+      <circle cy="-19" r="4.5" fill="#f4f0e9"/>
+      <circle cx="16" cy="-9" r="4.5" fill="#f4f0e9"/>
+      <circle cx="16" cy="10" r="4.5" fill="#f4f0e9"/>
+      <circle cy="20" r="4.5" fill="#f4f0e9"/>
+      <circle cx="-16" cy="10" r="4.5" fill="#f4f0e9"/>
+      <circle cx="-16" cy="-9" r="4.5" fill="#f4f0e9"/>
+    </g>
+
+    <g transform="translate(110 120)">
+      <ellipse rx="12" ry="25" fill="#d9783f" fill-opacity=".12"/>
+      <ellipse rx="8" ry="20" stroke="#c48a68" stroke-width="1"/>
+      <path d="M-4-17v34M1-17v34M-8-12l13-7M-8-3l15-9M-8 6l15-9M-8 15l15-9" stroke="#b88a70" stroke-width=".7"/>
+    </g>
+
+    <g transform="translate(110 184)">
+      <rect x="-25" y="-31" width="50" height="62" rx="3" fill="#d9783f" fill-opacity=".12"/>
+      <rect x="-19" y="-25" width="38" height="50" rx="2" stroke="#c48a68" stroke-width="1"/>
+      <path d="M-14-20l24 12M-14-10l24 12M-14 0l24 12M-14 10l20 10M-2-22l15 8M-2-12l15 8M-2-2l15 8" stroke="#b88a70" stroke-width=".7"/>
+    </g>
+
+    <g transform="translate(110 253)">
+      <circle r="30" fill="#d9783f" fill-opacity=".13"/>
+      <circle r="26" stroke-width="1"/>
+      <circle r="18" stroke="#c48a68" stroke-width="1"/>
+      <circle r="6" fill="#f4f0e9"/>
+      <path d="M-18-11l11-8M-22-2l16-11M-22 8l17-12M-17 17l13-9" stroke="#b88a70" stroke-width=".7"/>
+    </g>
+
+    <path d="M52 58h25M143 58h25M58 120h21M141 120h21M48 184h30M142 184h30M57 253h22M141 253h22" stroke="#c9b9a9" stroke-width=".8"/>
+    <path d="M52 58l-7 7M77 58l7-7M58 120l-7 7M79 120l7-7M48 184l-7 7M78 184l7-7M57 253l-7 7M79 253l7-7" stroke="#c9b9a9" stroke-width=".8"/>
+    <path d="M33 106l10-10 7 7-10 10zM172 204l10 10-7 7-10-10z" fill="#f4f0e9" stroke="#d9783f"/>
+  </g>
+  <g fill="#8f7b6a" font-family="monospace" font-size="7" letter-spacing="1">
+    <text x="38" y="300">AXIS / CHAMBER STUDY</text>
+    <text x="176" y="300">01/06</text>
+  </g>
+</svg>

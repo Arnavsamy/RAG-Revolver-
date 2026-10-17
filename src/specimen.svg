@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none">
+  <g stroke="#294e4b" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M18 110H302" stroke="#c9b9a9" stroke-dasharray="4 6"/>
+    <path d="M26 106h270M26 114h270" stroke="#dacfc3" stroke-width=".8"/>
+
+    <g transform="translate(67 110)">
+      <circle r="43" fill="#d9783f" fill-opacity=".13"/>
+      <circle r="39" stroke-width="1"/>
+      <circle r="32" stroke="#c48a68" stroke-width="1"/>
+      <circle r="8" fill="#f4f0e9"/>
+      <circle cy="-21" r="5" fill="#f4f0e9"/>
+      <circle cx="18" cy="-10" r="5" fill="#f4f0e9"/>
+      <circle cx="18" cy="11" r="5" fill="#f4f0e9"/>
+      <circle cy="22" r="5" fill="#f4f0e9"/>
+      <circle cx="-18" cy="11" r="5" fill="#f4f0e9"/>
+      <circle cx="-18" cy="-10" r="5" fill="#f4f0e9"/>
+      <path d="M-36-18A40 40 0 0 1-15-37M-35 23A40 40 0 0 0-19 36" stroke="#d9783f"/>
+    </g>
+
+    <g transform="translate(126 110)">
+      <ellipse rx="16" ry="48" fill="#d9783f" fill-opacity=".16"/>
+      <ellipse rx="11" ry="41" stroke="#c48a68" stroke-width="1"/>
+      <path d="M-5-35v70M0-35v70M5-35v70" stroke="#b88a70" stroke-width=".7"/>
+      <path d="M-12-27l11-9M-12-15l18-14M-12-3L12-22M-12 9L12-10M-12 21L12 2M-12 33L12 14" stroke="#b88a70" stroke-width=".7"/>
+    </g>
+
+    <g transform="translate(177 110)">
+      <ellipse rx="12" ry="39" fill="#f4f0e9"/>
+      <ellipse rx="8" ry="32" stroke="#c48a68" stroke-width="1"/>
+      <path d="M-3-27v54M2-27v54" stroke="#b88a70" stroke-width=".7"/>
+    </g>
+
+    <g transform="translate(235 110)">
+      <circle r="31" fill="#d9783f" fill-opacity=".13"/>
+      <circle r="27" stroke-width="1"/>
+      <circle r="19" stroke="#c48a68" stroke-width="1"/>
+      <circle r="7" fill="#f4f0e9"/>
+      <path d="M-20-16l11-8M-24-8l17-12M-25 1l20-14M-23 11l18-13M-16 20l13-9" stroke="#b88a70" stroke-width=".7"/>
+    </g>
+
+    <path d="M278 89l13-13 8 8-13 13zM278 131l13 13-8 8-13-13z" fill="#f4f0e9" stroke="#d9783f"/>
+    <path d="M91 52h35M150 52h38M196 168h45" stroke="#c9b9a9" stroke-width=".8"/>
+    <path d="M91 52l-8 8M126 52l8 8M150 52l-8 8M188 52l8 8M196 168l-8-8M241 168l8-8" stroke="#c9b9a9" stroke-width=".8"/>
+  </g>
+  <g fill="#8f7b6a" font-family="monospace" font-size="7" letter-spacing="1">
+    <text x="18" y="199">EXPLODED CHAMBER STUDY</text>
+    <text x="250" y="199">01 / 06</text>
+  </g>
+</svg>
